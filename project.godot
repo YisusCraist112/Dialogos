@@ -84,6 +84,10 @@ config/name="Dialogo"
 run/main_scene="res://Escena.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Jugador="*res://jugador.gd"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
