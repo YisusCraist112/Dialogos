@@ -12,7 +12,7 @@ func _input(event):
 	if get_node_or_null('DialogNode') == null:
 		if event.is_action_pressed("ui_accept") and active:
 			get_tree().paused = true
-			var dialog = Dialogic.start('time2')
+			var dialog = Dialogic.start('time1')
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			dialog.connect('timeline_end',self, 'unpause')
 			dialog.connect("dialogic_signal", self, 'dialogic_signal')
@@ -35,4 +35,6 @@ func dialogic_signal(argument):
 		get_tree().paused = false
 	if argument=='_velocidad':
 		Jugador.speed+=200
+	if argument=='-velocidad':
+		Jugador.speed-=200
 	
