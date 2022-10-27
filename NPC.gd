@@ -37,4 +37,5 @@ func dialogic_signal(argument):
 		Jugador.speed+=200
 	if argument=='-velocidad':
 		Jugador.speed-=200
-	
+	if argument=='_salir':
+		get_tree().quit()
